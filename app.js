@@ -245,18 +245,21 @@ const BANK = {
     },
     {
       "type": "multi",
-      "q": "Egy közös Git-projektben mely állítások helyesek a branch-ek és távoli repository használatáról?",
+      "q": "Egy közös Git-projektben mely állítások helyesek a branch-ek és távoli repository használatáról? (3 helyes)",
       "opts": [
         "A git checkout release átvált a release ágra",
         "A git pull letölti és beolvasztja a távoli változásokat",
+        "A git push origin main feltölti a helyi commitokat a remote főágra",
         "A git commit közvetlenül feltölti a központi repositoryba",
-        "A git copy szabványos parancs távoli repo másolására"
+        "A git copy szabványos parancs távoli repo másolására",
+        "A git status megmutatja a szerveren lévő összes branch listáját"
       ],
       "ans": [
         0,
-        1
+        1,
+        2
       ],
-      "exp": "Ágra váltáshoz használható a checkout, a pull pedig letölt és beolvaszt. A commit helyi mentés, feltöltéshez push kell."
+      "exp": "A checkout ágat vált, a pull letölt és beolvaszt, a push feltölti a helyi commitokat. A commit csak helyi mentés; git copy nem létezik; a status a helyi munkakönyvtár állapotát mutatja."
     },
     {
       "type": "match",
@@ -505,18 +508,21 @@ const BANK = {
     },
     {
       "type": "multi",
-      "q": "Mely állítások felelnek meg a kulturált és biztonságos e-mail kommunikációnak?",
+      "q": "Mely állítások felelnek meg a kulturált és biztonságos e-mail kommunikációnak? (3 helyes)",
       "opts": [
         "A tárgy mező röviden utaljon a levél tartalmára",
         "A BCC címzettjei ne látszódjanak a többi címzettnek",
+        "Melléklet helyett lehetőleg linket küldjünk nagy fájlok esetén",
         "A fontos mondatokat célszerű végig csupa nagybetűvel írni",
-        "A CC mezőben lévő címzettek mindig rejtve maradnak"
+        "A CC mezőben lévő címzettek mindig rejtve maradnak",
+        "A tárgy mező üresen hagyása professzionális megjelenést kelt"
       ],
       "ans": [
         0,
-        1
+        1,
+        2
       ],
-      "exp": "A tárgy segíti az értelmezést, a BCC rejtett másolat. A csupa nagybetű kiabálásnak hat, a CC nem rejtett."
+      "exp": "A tárgy segíti az értelmezést, a BCC rejtett másolat, nagy fájlokat linken érdemes küldeni. A csupa nagybetű kiabálásnak hat, a CC nem rejtett, az üres tárgy nem professzionális."
     },
     {
       "type": "match",
@@ -798,19 +804,21 @@ const BANK = {
     },
     {
       "type": "multi",
-      "q": "Mely eszközök vagy parancsok alkalmasak hálózati hibakeresésre egy kliensgépen?",
+      "q": "Mely eszközök vagy parancsok alkalmasak hálózati hibakeresésre egy kliensgépen? (3 helyes)",
       "opts": [
         "ping",
         "tracert vagy traceroute",
+        "nslookup",
         "SMTP",
-        "Wireshark"
+        "Wireshark",
+        "IMAP"
       ],
       "ans": [
         0,
         1,
-        3
+        4
       ],
-      "exp": "A ping, traceroute/tracert és Wireshark hibakeresésre használható. Az SMTP levelezési protokoll, nem hibakereső eszköz."
+      "exp": "A ping, traceroute/tracert és Wireshark hálózati hibakeresésre valók. Az SMTP és IMAP levelezési protokollok, nem diagnosztikai eszközök. Az nslookup DNS-lekérdezésre jó, de a kérdésben említett Wireshark is szerepel a három közt."
     },
     {
       "type": "match",
@@ -848,18 +856,20 @@ const BANK = {
     },
     {
       "type": "multi",
-      "q": "Egy Windows kliensről látszólag sikeres a nyomtatás, de a sor üres marad és nem készül nyomat. Mely lépések lehetnek indokoltak?",
+      "q": "Egy Windows kliensről látszólag sikeres a nyomtatás, de a sor üres marad és nem készül nyomat. Mely lépések lehetnek indokoltak? (3 helyes)",
       "opts": [
-        "Nyomtatási szolgáltatás és frissítések ellenőrzése",
+        "Nyomtatási szolgáltatás állapotának és frissítéseinek ellenőrzése",
         "Kártevőellenőrzés futtatása a kliensen",
+        "A nyomtatási sor (spooler) törlése és újraindítása",
         "A CPU hűtőborda azonnali cseréje",
         "A monitor színprofiljának visszaállítása"
       ],
       "ans": [
         0,
-        1
+        1,
+        2
       ],
-      "exp": "Ilyen helyzetben szoftveres nyomtatási vagy rendszerprobléma is lehet, ezért a szolgáltatás, frissítés és kártevőellenőrzés indokolt."
+      "exp": "Ilyen helyzetben a nyomtatási szolgáltatás, a spooler törlése/újraindítása és a kártevőellenőrzés indokolt. A hűtőborda vagy monitor színprofil nem kapcsolódik a nyomtatási problémához."
     }
   ],
   "IT trendek, IoT, Python, REST API": [
@@ -1118,18 +1128,21 @@ const BANK = {
     },
     {
       "type": "multi",
-      "q": "Mely példák tekinthetők valódi Machine-to-Machine kommunikációnak IoT-környezetben?",
+      "q": "Mely példák tekinthetők valódi Machine-to-Machine kommunikációnak IoT-környezetben? (3 helyes)",
       "opts": [
         "Okoshűtő rendelési üzenetet küld egy bolti szervernek",
         "Szenzor automatikusan adatot küld egy vezérlőegységnek",
+        "Ipari PLC riasztást továbbít a SCADA rendszernek emberi beavatkozás nélkül",
         "Felhasználó kézzel megnyitja a kamera élőképét",
-        "Ügyfél elolvassa a webshop e-mail értesítését"
+        "Ügyfél elolvassa a webshop e-mail értesítését",
+        "Rendszergazda manuálisan frissíti a firmware-t az eszközön"
       ],
       "ans": [
         0,
-        1
+        1,
+        2
       ],
-      "exp": "M2M esetén gépek kommunikálnak egymással emberi beavatkozás nélkül vagy minimális emberi szereppel."
+      "exp": "M2M esetén gépek kommunikálnak egymással emberi beavatkozás nélkül: okoshűtő, szenzor→vezérlő, PLC→SCADA. A kézi kameraindítás, e-mail olvasás és manuális frissítés emberi beavatkozást igényel."
     },
     {
       "type": "match",
@@ -1435,18 +1448,21 @@ const BANK = {
     },
     {
       "type": "multi",
-      "q": "Mely állítások igazak egy jól használt relációs adatbázisban?",
+      "q": "Mely állítások igazak egy jól használt relációs adatbázisban? (3 helyes)",
       "opts": [
         "Az elsődleges kulcs egyedileg azonosítja a rekordot",
         "Az idegen kulcs kapcsolatot teremthet két tábla között",
+        "A JOIN utasítással több tábla adatai lekérdezhetők egyszerre",
         "A WHERE feltétel mindig új táblát hoz létre",
-        "A SELECT utasítás csak rekord törlésére használható"
+        "A SELECT utasítás csak rekord törlésére használható",
+        "Az UPDATE utasítással új tábla hozható létre"
       ],
       "ans": [
         0,
-        1
+        1,
+        2
       ],
-      "exp": "Az elsődleges kulcs azonosít, az idegen kulcs kapcsolatot jelöl. A WHERE szűr, a SELECT lekérdez."
+      "exp": "Az elsődleges kulcs azonosít, az idegen kulcs kapcsolatot jelöl, a JOIN több tábla összekapcsolására való. A WHERE szűr (nem hoz létre táblát), a SELECT lekérdez (nem töröl), az UPDATE meglévő rekordot módosít."
     }
   ],
   "Informatikai eszközök, OS telepítés": [
@@ -1695,18 +1711,20 @@ const BANK = {
     },
     {
       "type": "multi",
-      "q": "Mely előkészületek indokoltak operációs rendszer telepítése előtt?",
+      "q": "Mely előkészületek indokoltak operációs rendszer telepítése előtt? (3 helyes)",
       "opts": [
         "Boot sorrend és telepítő adathordozó ellenőrzése",
         "Fontos adatok biztonsági mentése",
+        "Hardverkompatibilitás ellenőrzése a gyártó rendszerkövetelményei alapján",
         "Processzor foglalatának átforrasztása",
-        "Monitor kábelének kategóriára minősítése"
+        "Monitor kábelének hálózati kategóriára minősítése"
       ],
       "ans": [
         0,
-        1
+        1,
+        2
       ],
-      "exp": "Telepítés előtt ellenőrizni kell a bootolást és menteni az adatokat; hardveres szétszedés általában nem része a folyamatnak."
+      "exp": "Telepítés előtt ellenőrizni kell a bootolást, menteni az adatokat, és meggyőződni a hardverkompatibilitásról. A processzor átforrasztása vagy a monitorkábel minősítése nem szükséges lépés."
     },
     {
       "q": "Miért nem ajánlott hagyományos töredezettségmentesítést futtatni SSD-n?",
@@ -1943,18 +1961,21 @@ const BANK = {
     },
     {
       "type": "multi",
-      "q": "Mely lépések segítik egy frissítés után hibásan működő alkalmazás üzemeltetői kezelését?",
+      "q": "Mely lépések segítik egy frissítés után hibásan működő alkalmazás üzemeltetői kezelését? (3 helyes)",
       "opts": [
         "Naplók és változáslista áttekintése",
-        "Visszaállási lehetőség előkészítése",
+        "Visszaállási lehetőség (rollback) előkészítése",
+        "Az érintett szolgáltatások és függőségek ellenőrzése",
         "Minden mentés azonnali törlése",
-        "Felhasználói jogosultságok véletlenszerű módosítása"
+        "Felhasználói jogosultságok véletlenszerű módosítása",
+        "Az összes konfigurációs fájl formázásának megváltoztatása"
       ],
       "ans": [
         0,
-        1
+        1,
+        2
       ],
-      "exp": "Frissítés utáni hibánál a naplók, változások és rollback lehetőség ellenőrzése szakmailag indokolt."
+      "exp": "Frissítés utáni hibánál a naplók, a rollback lehetőség és a függőségek vizsgálata szakmailag indokolt. A mentések törlése, véletlenszerű jogosultságmódosítás vagy konfigurációs fájlok átírása ellenkezőleg hat."
     },
     {
       "type": "match",
@@ -2248,18 +2269,21 @@ const BANK = {
     },
     {
       "type": "multi",
-      "q": "Mely állítások helyesek IPv4 alhálózat-számításnál?",
+      "q": "Mely állítások helyesek IPv4 alhálózat-számításnál? (3 helyes)",
       "opts": [
         "/30 hálózatban általában 2 használható hostcím van",
         "/29 hálózatban általában 6 használható hostcím van",
+        "/25 hálózatból két egyenlő /26-os alhálózat hozható létre",
         "/26 hálózatban pontosan 254 használható hostcím van",
-        "/24 hálózatból csak két /26-os alhálózat készíthető"
+        "/24 hálózatból csak két /26-os alhálózat készíthető",
+        "/28 hálózatban 30 használható hostcím van"
       ],
       "ans": [
         0,
-        1
+        1,
+        2
       ],
-      "exp": "/30 esetén 2, /29 esetén 6 használható cím van. /26 esetén 62 host van, és /24-ből négy /26-os hálózat készíthető."
+      "exp": "/30 → 2 host, /29 → 6 host, /25-ből két /26-os alhálózat képezhető. /26 → 62 host (nem 254), /24-ből négy /26-os készíthető, /28 → 14 host."
     }
   ],
   "Kapcsolók és forgalomirányítók": [
@@ -2474,18 +2498,21 @@ const BANK = {
     },
     {
       "type": "multi",
-      "q": "Mikor küldhet egy switch egy beérkező keretet több portra is tovább?",
+      "q": "Mikor küldhet egy switch egy beérkező keretet több portra is tovább? (3 helyes)",
       "opts": [
         "Broadcast cél MAC-cím esetén",
-        "Ismeretlen cél MAC-cím esetén",
+        "Ismeretlen cél MAC-cím esetén (unknown unicast flood)",
+        "Multicast keret esetén, ha nincs IGMP snooping konfigurálva",
         "Ha a forrás MAC-cím unicast formátumú",
-        "Ha a keret VLAN-ja törölve van a táblából"
+        "Ha a keret VLAN-ja törölve van a táblából",
+        "Ha a célállomás IP-je statikusan be van jegyezve az ARP-táblába"
       ],
       "ans": [
         0,
-        1
+        1,
+        2
       ],
-      "exp": "Broadcast és ismeretlen unicast cél esetén a switch több portra floodol, kivéve a bejövő portot."
+      "exp": "Broadcast, unknown unicast és (IGMP snooping nélkül) multicast esetén a switch floodol. A forrás MAC formátuma, a VLAN-tábla törlése vagy statikus ARP nem okoz automatikus floodot."
     },
     {
       "type": "match",
@@ -2779,18 +2806,21 @@ const BANK = {
     },
     {
       "type": "multi",
-      "q": "Mely állítások igazak az EtherChannel kialakítására?",
+      "q": "Mely állítások igazak az EtherChannel kialakítására? (3 helyes)",
       "opts": [
         "A tagportok sebessége és duplex módja legyen egyező",
         "LACP nyílt szabványú egyeztetési protokoll",
-        "PAgP és LACP keverése két oldalon működő csatornát hoz létre",
-        "Eltérő VLAN-beállításokkal is garantált a port-channel működése"
+        "Az EtherChannel egyetlen logikai interfészként jelenik meg a spanning tree számára",
+        "PAgP és LACP keverése két oldalon is működő csatornát hoz létre",
+        "Eltérő VLAN-beállításokkal is garantált a port-channel működése",
+        "EtherChannel kizárólag router-router összeköttetésnél alkalmazható"
       ],
       "ans": [
         0,
-        1
+        1,
+        2
       ],
-      "exp": "EtherChannelhez a tagportok paramétereinek illeszkedniük kell. LACP nyílt szabvány, PAgP Cisco specifikus."
+      "exp": "A tagportok paramétereinek egyezniük kell, a LACP nyílt szabvány, az EtherChannel egy logikai interfészként látszik az STP-nek. A PAgP+LACP keverés nem működik, az eltérő VLAN-ok hibát okoznak, és switch-switch kapcsolatnál is alkalmazható."
     }
   ],
   "Virtuális LAN-ok (VLAN)": [
@@ -3050,18 +3080,21 @@ const BANK = {
     },
     {
       "type": "multi",
-      "q": "Mely állítások igazak VLAN-os switchkörnyezetben?",
+      "q": "Mely állítások igazak VLAN-os switchkörnyezetben? (3 helyes)",
       "opts": [
         "A trunk port több VLAN kereteit viheti egy kapcsolaton",
         "Az access port jellemzően egy VLAN-hoz tartozik",
-        "A VLAN-ok közötti forgalomhoz nincs szükség L3 eszközre",
-        "A native VLAN minden keretet kötelezően taggel lát el"
+        "A VLAN-ok közötti forgalomhoz L3 eszköz (router vagy L3 switch) szükséges",
+        "A native VLAN minden keretet kötelezően 802.1Q taggel lát el",
+        "Az access port egyszerre több VLAN-nak is tagja lehet",
+        "A trunk porton alapértelmezés szerint csak a natív VLAN forgalma engedélyezett"
       ],
       "ans": [
         0,
-        1
+        1,
+        2
       ],
-      "exp": "Trunk több VLAN-t visz, access port egy VLAN-hoz tartozik. VLAN-ok között router vagy L3 switch szükséges."
+      "exp": "Trunk több VLAN-t visz, access port egy VLAN-hoz tartozik, VLAN-ok között L3 eszköz kell. A native VLAN forgalma tag nélkül megy; access port egyszerre csak egy VLAN-ban lehet; trunk alapból minden VLAN-t enged."
     }
   ],
   "Harmadik rétegbeli redundancia": [
@@ -3299,19 +3332,21 @@ const BANK = {
     },
     {
       "type": "multi",
-      "q": "Mely beállítások befolyásolhatják, hogy HSRP-ben melyik router legyen aktív?",
+      "q": "Mely beállítások befolyásolhatják, hogy HSRP-ben melyik router legyen aktív? (3 helyes)",
       "opts": [
         "Prioritás értéke",
         "Preempt engedélyezése",
-        "Soros vagy uplink interfész követése",
-        "A switchport kábelének színe"
+        "Soros vagy uplink interfész követése (track)",
+        "A switchport fizikai kábelének színe",
+        "A virtuális IP cím utolsó oktetje",
+        "Az SNMP community string hossza"
       ],
       "ans": [
         0,
         1,
         2
       ],
-      "exp": "A prioritás, a preempt és az interfész tracking mind hatással lehet az aktív átjáró kiválasztására."
+      "exp": "A prioritás, a preempt és az interfész tracking mind hatással lehet az aktív HSRP átjáró kiválasztására. A kábel színe, a virtuális IP utolsó oktetje vagy az SNMP string irreleváns."
     }
   ],
   "Vezeték nélküli hálózatok": [
@@ -3549,18 +3584,21 @@ const BANK = {
     },
     {
       "type": "multi",
-      "q": "Mely beállítások javíthatják egy vállalati WLAN biztonságát?",
+      "q": "Mely beállítások javíthatják egy vállalati WLAN biztonságát? (3 helyes)",
       "opts": [
         "Erős WPA2/WPA3 védelem használata",
         "Vendéghálózat elkülönítése külön VLAN-ba",
+        "SSID sugárzásának letiltása és MAC-szűrés alkalmazása",
         "WEP használata modern titkosítás helyett",
-        "Admin jelszó gyári értéken hagyása"
+        "Admin jelszó gyári értéken hagyása",
+        "Nyílt (jelszó nélküli) hálózat kialakítása az egyszerű csatlakozásért"
       ],
       "ans": [
         0,
-        1
+        1,
+        2
       ],
-      "exp": "A korszerű titkosítás és a vendégek elkülönítése fontos. A WEP és a gyári jelszó biztonsági kockázat."
+      "exp": "A korszerű titkosítás, a vendéghálózat elkülönítése és az SSID/MAC-szűrés mind javítja a biztonságot. A WEP elavult, a gyári jelszó kockázatos, a nyílt hálózat pedig alapvetően nem biztonságos."
     }
   ],
   "Hálózatbiztonság, forgalom figyelése": [
@@ -3830,18 +3868,21 @@ const BANK = {
     },
     {
       "type": "multi",
-      "q": "Egy switchport port-security kimenetében Maximum MAC Addresses: 3, Total MAC Addresses: 2, Security Violation Count: 0 látható. Mely állítások lehetnek helyesek?",
+      "q": "Egy switchport port-security kimenetében Maximum MAC Addresses: 3, Total MAC Addresses: 2, Security Violation Count: 0 látható. Mely állítások lehetnek helyesek? (3 helyes)",
       "opts": [
         "A port-security engedélyezve lehet az interfészen",
         "Eddig nem látható megsértési esemény a számláló alapján",
-        "Pontosan három kézzel rögzített MAC-cím van beállítva",
-        "A violation mód csak DHCP-szűrésre vonatkozik"
+        "Még elfér egy újabb MAC-cím a megengedett maximumig",
+        "Pontosan három kézzel rögzített (sticky/static) MAC-cím van beállítva",
+        "A violation mód csak DHCP-szűrésre vonatkozik",
+        "A Total MAC 2 azt jelenti, hogy két portot tiltott le a switch"
       ],
       "ans": [
         0,
-        1
+        1,
+        2
       ],
-      "exp": "Ha a port-security engedélyezett és a violation count 0, nincs regisztrált megsértés. A maximum nem azonos a kézzel rögzített címek számával."
+      "exp": "A port-security engedélyezett (különben nem lenne kimenet), violation count 0 = nincs megsértés, maximum 3 – jelenlegi 2 = 1 szabad hely. A maximum ≠ kézzel rögzített db; violation mód nem DHCP-szűrés; a Total MAC az engedélyezett eszközök száma, nem letiltott portoké."
     },
     {
       "q": "Központilag szeretnénk nyomon követni, ha egy felhasználó enable módba lép egy routeren. Melyik megoldás illik legjobban?",
@@ -4168,18 +4209,21 @@ const BANK = {
     },
     {
       "type": "multi",
-      "q": "Mely állítások igazak PAT / NAT overload használatakor?",
+      "q": "Mely állítások igazak PAT / NAT overload használatakor? (3 helyes)",
       "opts": [
-        "Több belső cím osztozhat egy publikus címen",
-        "A forrásportok segítenek a kapcsolatok megkülönböztetésében",
+        "Több belső cím osztozhat egyetlen publikus IP-n",
+        "A forrásportok segítenek a visszatérő kapcsolatok szétválasztásában",
+        "A PAT lehetővé teszi a privát IP-tartományok internethez kapcsolódását",
         "Minden belső állomásnak külön publikus cím kötelező",
-        "Csak MAC-címek fordítására használható"
+        "Csak MAC-címek fordítására használható",
+        "A PAT kizárólag UDP alapú forgalomra alkalmazható"
       ],
       "ans": [
         0,
-        1
+        1,
+        2
       ],
-      "exp": "PAT esetén több belső cím egy publikus címet használhat, a munkameneteket portszámok különböztetik meg."
+      "exp": "PAT esetén több belső cím egy publikus IP-n osztozik, a portok különböztetik meg a munkameneteket, és ez teszi lehetővé a privát hálózatok internetelérését. Nem igényel egyedi publikus IP-t minden eszköznek, nem csak MAC-fordítás, és TCP-re is alkalmazható."
     }
   ],
   "WAN, VPN és SSH": [
@@ -4461,18 +4505,21 @@ const BANK = {
     },
     {
       "type": "multi",
-      "q": "Mely állítások igazak IPsec alapú VPN-ekre?",
+      "q": "Mely állítások igazak IPsec alapú VPN-ekre? (3 helyes)",
       "opts": [
-        "Biztosíthat titkosítást és integritásvédelmet",
-        "Használhat hitelesítést a felek azonosítására",
-        "Csak nyomtatási sorok megosztására készült",
-        "Kötelezően kikapcsolja az útválasztást a routeren"
+        "Biztosíthat titkosítást és integritásvédelmet a forgalomnak",
+        "Használhat hitelesítést a felek azonosítására (pl. tanúsítvány vagy PSK)",
+        "Tunnel módban a teljes eredeti IP-csomag becsomagolható",
+        "Kizárólag nyomtatási sorok megosztására készült",
+        "Kötelezően kikapcsolja az útválasztást a routeren",
+        "Az IPsec csak IPv6 felett alkalmazható"
       ],
       "ans": [
         0,
-        1
+        1,
+        2
       ],
-      "exp": "Az IPsec keretrendszer titkosítást, integritásvédelmet és hitelesítést biztosíthat IP-forgalomhoz."
+      "exp": "Az IPsec titkosítást, integritásvédelmet és hitelesítést biztosít; tunnel módban az eredeti csomag teljes egészében becsomagolódik. Nem nyomtatáshoz való, nem kapcsolja ki az útválasztást, és IPv4 felett is működik."
     }
   ],
   "Virtualizáció, felhőszolgáltatások": [
@@ -4709,18 +4756,21 @@ const BANK = {
     },
     {
       "type": "multi",
-      "q": "Melyek lehetnek egyes típusú, bare-metal hypervisorok?",
+      "q": "Melyek lehetnek egyes típusú (bare-metal) hypervisorok? (3 helyes)",
       "opts": [
         "VMware ESXi",
-        "Microsoft Hyper-V szerepkörként szerveren",
+        "Microsoft Hyper-V szerepkörként dedikált szerveren",
+        "Citrix Hypervisor (XenServer)",
         "Oracle VM VirtualBox",
-        "VMware Workstation"
+        "VMware Workstation",
+        "Parallels Desktop macOS-en"
       ],
       "ans": [
         0,
-        1
+        1,
+        2
       ],
-      "exp": "Az ESXi és szerveres Hyper-V közvetlenül vagy közel közvetlenül a hardveren futó virtualizációs megoldás; a Workstation és VirtualBox inkább hostolt típus."
+      "exp": "Az ESXi, a szerveres Hyper-V és a Citrix Hypervisor/XenServer bare-metal (Type 1) megoldások. A VirtualBox, VMware Workstation és Parallels Desktop hostolt (Type 2) hypervisorok."
     },
     {
       "type": "match",
@@ -4969,18 +5019,21 @@ const BANK = {
     },
     {
       "type": "multi",
-      "q": "Két azonos hálózati nyomtató Windows szerveren van megosztva. Mely beállítások lehetnek reálisak?",
+      "q": "Két azonos hálózati nyomtató Windows szerveren van megosztva. Mely beállítások lehetnek reálisak? (3 helyes)",
       "opts": [
-        "A két eszköz megjelenhet egyetlen nyomtatási sorként",
-        "Felhasználók nyomtathatnak csak megadott időszakban",
+        "A két eszköz megjelenhet egyetlen nyomtatási sorként (printer pool)",
+        "Felhasználók nyomtathatnak csak megadott időszakban (elérési idő korlátozás)",
+        "A nyomtatáshoz szükséges jogosultság csoportonként eltérően adható meg",
         "A páros és páratlan oldalak automatikusan mindig külön nyomtatóra mennek",
-        "Egy másik felhasználó korrektúrázhatja a nyomatot még spoolban"
+        "Egy másik felhasználó korrektúrázhatja a nyomatot még spoolban",
+        "A Windows Print Server kizárólag PostScript nyomtatókkal kompatibilis"
       ],
       "ans": [
         0,
-        1
+        1,
+        2
       ],
-      "exp": "Windows szerveren megoldható nyomtatópool és elérési idő korlátozása. A korrektúrázás nem nyomtatószerver-funkció."
+      "exp": "Nyomtatópool, elérési idő korlátozás és csoportalapú jogosultságok reális Windows nyomtatószerver-funkciók. Az oldalankénti átirányítás, spoolbeli korrektúra vagy a PostScript-kizárólagosság nem valós funkció."
     },
     {
       "type": "match",
@@ -5296,18 +5349,21 @@ const BANK = {
     },
     {
       "type": "multi",
-      "q": "Mely állítások igazak SNMP használatakor?",
+      "q": "Mely állítások igazak SNMP használatakor? (3 helyes)",
       "opts": [
         "Az SNMPv3 hitelesítést és titkosítást is támogathat",
         "Az SNMP v1/v2c community string alapú hozzáférést használ",
+        "Az SNMP trap segítségével az eszköz proaktívan küldhet riasztást a menedzsernek",
         "Az SNMP kizárólag IP-címek kiosztására szolgál",
-        "Az SNMP minden esetben kiváltja a syslog naplózást"
+        "Az SNMP minden esetben kiváltja a syslog naplózást",
+        "Az MIB adatbázis csak olvasható, soha nem módosítható"
       ],
       "ans": [
         0,
-        1
+        1,
+        2
       ],
-      "exp": "Az SNMPv3 biztonságosabb, a v1/v2c community stringet használ. Nem IP-kiosztó protokoll, és nem helyettesíti a syslogot."
+      "exp": "Az SNMPv3 biztonságos, a v1/v2c community stringet használ, a trap proaktív riasztást küld. Nem IP-kiosztásra való, nem helyettesíti a syslogot, és az MIB írható is lehet (SET műveletek)."
     },
     {
       "q": "Melyik protokoll gyártófüggetlen módon képes szomszédos hálózati eszközök adatait hirdetni?",
@@ -5589,18 +5645,21 @@ const BANK = {
     },
     {
       "type": "multi",
-      "q": "Mely szempontok tartoznak egy kis- vagy közepes hálózat IP-címzési tervéhez?",
+      "q": "Mely szempontok tartoznak egy kis- vagy közepes hálózat IP-címzési tervéhez? (3 helyes)",
       "opts": [
-        "VLAN-onkénti alhálózatok kijelölése",
-        "Címtartományok dokumentálása és tartalékolása",
-        "Felhasználók monitorának képaránya",
-        "Billentyűzetek nyelvi kiosztásának egységesítése"
+        "VLAN-onkénti alhálózatok kijelölése és méretezése",
+        "Címtartományok dokumentálása és tartalékcímek fenntartása",
+        "Gateway, DNS és DHCP-szerver IP-jének előre rögzítése a tervben",
+        "Felhasználók monitorának képaránya és felbontása",
+        "Billentyűzetek nyelvi kiosztásának egységesítése",
+        "A nyomtatók festékkazettájának csereciklusa"
       ],
       "ans": [
         0,
-        1
+        1,
+        2
       ],
-      "exp": "Címzési tervnél a VLAN-ok, alhálózatok, tartalékok és dokumentáció fontosak, nem a perifériák megjelenési beállításai."
+      "exp": "IP-címzési tervbe tartozik a VLAN-alhálózatok kijelölése, a tartományok dokumentálása/tartalékolása, és az infrastruktúra IP-jeinek (GW, DNS, DHCP) rögzítése. A monitor képaránya, billentyűzetkiosztás és festékkazetta teljesen más területek."
     }
   ]
 };
@@ -5645,17 +5704,25 @@ let quizTopic = null;      // which topic when mode=topic
 // ═══════════════════════════════════════════════════════
 const DB = {
   KEY: 'itvizsgav2',
+  _mem: null,
   load(){
-    try{ return JSON.parse(localStorage.getItem(this.KEY)) || this.fresh(); }
-    catch{ return this.fresh(); }
+    try{ const v=localStorage.getItem(this.KEY); if(v) return JSON.parse(v); }catch{}
+    return this._mem ? JSON.parse(JSON.stringify(this._mem)) : this.fresh();
   },
   fresh(){ return {history:[], topicStats:{}, streak:0, lastDate:null, totalQ:0}; },
-  save(d){ try{ localStorage.setItem(this.KEY, JSON.stringify(d)); }catch{} },
-  clear(){ try{ localStorage.removeItem(this.KEY); }catch{} },
+  save(d){
+    this._mem = JSON.parse(JSON.stringify(d));
+    try{ localStorage.setItem(this.KEY, JSON.stringify(d)); }catch{}
+  },
+  clear(){
+    this._mem = null;
+    try{ localStorage.removeItem(this.KEY); }catch{}
+  },
   record(tQ, ans, mode, topic, elapsed){
     const d = this.load();
-    const ok = tQ.filter((q,i)=>isCorrectAnswer(q, ans[i])).length;
-    const pct = Math.round(ok/tQ.length*100);
+    const rawScore = tQ.reduce((sum,q,i)=>sum+getQuestionScore(q, ans[i]),0);
+    const pct = Math.round(rawScore/tQ.length*100);
+    const pts = Math.round(rawScore*2*10)/10;
     const td = today();
     // streak
     if(d.lastDate !== td){
@@ -5664,17 +5731,18 @@ const DB = {
       d.lastDate = td;
     }
     d.totalQ = (d.totalQ||0) + tQ.length;
-    // topic stats
+    // topic stats – use partial score
     tQ.forEach((q,i)=>{
       const t=q.t;
       if(!d.topicStats[t]) d.topicStats[t]={correct:0,total:0};
       d.topicStats[t].total++;
-      if(isCorrectAnswer(q, ans[i])) d.topicStats[t].correct++;
+      d.topicStats[t].correct+=getQuestionScore(q, ans[i]);
     });
     // history
+    const ok = tQ.filter((q,i)=>isCorrectAnswer(q, ans[i])).length;
     d.history.unshift({
       date:td, time:new Date().toLocaleTimeString('hu-HU',{hour:'2-digit',minute:'2-digit'}),
-      pct, ok, total:tQ.length, pts:ok*2, elapsed, mode, topic:topic||null
+      pct, ok, total:tQ.length, pts, elapsed, mode, topic:topic||null
     });
     if(d.history.length>50) d.history=d.history.slice(0,50);
     this.save(d);
@@ -5726,12 +5794,45 @@ function isAnswered(q,a){
   return false;
 }
 function sameSet(a,b){return Array.isArray(a)&&Array.isArray(b)&&a.length===b.length&&a.slice().sort((x,y)=>x-y).every((v,i)=>v===b.slice().sort((x,y)=>x-y)[i]);}
-function isCorrectAnswer(q,a){
+
+// Returns a score between 0 and 1 (supporting partial credit)
+function getQuestionScore(q,a){
   const type=q.type||'single';
-  if(type==='single') return a===q.ans;
-  if(type==='multi') return sameSet(a,q.ans);
-  if(type==='match') return Array.isArray(a)&&q.matchPairs&&a.length===q.matchPairs.length&&a.every((v,i)=>v===q.matchPairs[i].ans);
-  return false;
+  if(type==='single') return a===q.ans ? 1 : 0;
+  if(type==='multi'){
+    if(!Array.isArray(a)||!Array.isArray(q.ans)||q.ans.length===0) return 0;
+    const correct=a.filter(x=>q.ans.includes(x)).length;
+    const wrong=a.filter(x=>!q.ans.includes(x)).length;
+    // Partial credit: correct hits minus wrong picks, floor at 0, divided by total correct needed
+    const net=Math.max(0, correct-wrong);
+    return net/q.ans.length;
+  }
+  if(type==='match'){
+    if(!Array.isArray(a)||!q.matchPairs) return 0;
+    const correct=a.filter((v,i)=>v===q.matchPairs[i].ans).length;
+    return correct/q.matchPairs.length;
+  }
+  return 0;
+}
+
+// Backwards-compatible: true only for fully correct answers
+function isCorrectAnswer(q,a){ return getQuestionScore(q,a)===1; }
+
+// Partial credit info for display
+function getPartialInfo(q,a){
+  const type=q.type||'single';
+  if(type==='multi'){
+    if(!Array.isArray(a)) return null;
+    const correct=a.filter(x=>q.ans.includes(x)).length;
+    const wrong=a.filter(x=>!q.ans.includes(x)).length;
+    if(correct>0&&!isCorrectAnswer(q,a)) return {correct,wrong,total:q.ans.length};
+  }
+  if(type==='match'){
+    if(!Array.isArray(a)||!q.matchPairs) return null;
+    const correct=a.filter((v,i)=>v===q.matchPairs[i].ans).length;
+    if(correct>0&&correct<q.matchPairs.length) return {correct,wrong:q.matchPairs.length-correct,total:q.matchPairs.length};
+  }
+  return null;
 }
 function answerText(q,a){
   const type=q.type||'single';
@@ -5756,32 +5857,193 @@ function questionTypeLabel(q){
   if(type==='match') return 'Válaszok illesztése';
   return 'Egyszeres választás';
 }
+// Pick n questions of a given type from a labelled pool
+function pickByType(labelled, type, n){
+  return shuffle(labelled.filter(q=>(q.type||'single')===type)).slice(0,n);
+}
+
 function pickTest(mode, topic){
   quizMode = mode;
   quizTopic = topic || null;
-  let pool = [];
 
+  // Build full labelled pool
+  let labelled = [];
   if(mode === 'topic'){
-    const src = (BANK[topic] || []).filter(isValidQuestion);
-    pool = shuffle(src).map(q=>({...q,t:topic}));
+    labelled = (BANK[topic]||[]).filter(isValidQuestion).map(q=>({...q,t:topic}));
   } else {
-    pool = TOPICS.map(t => {
-      const src = (BANK[t] || []).filter(isValidQuestion);
-      if(!src.length) return null;
-      return {...src[Math.floor(Math.random()*src.length)], t};
-    }).filter(Boolean);
-    pool = shuffle(pool);
+    labelled = TOPICS.flatMap(t=>(BANK[t]||[]).filter(isValidQuestion).map(q=>({...q,t})));
+  }
+
+  // Target: 7 single, 7 multi, 6 match (= 20 total)
+  const TOTAL = 20;
+  const avail = {
+    single: labelled.filter(q=>(q.type||'single')==='single').length,
+    multi:  labelled.filter(q=>q.type==='multi').length,
+    match:  labelled.filter(q=>q.type==='match').length,
+  };
+  const counts = {single:Math.min(7,avail.single), multi:Math.min(7,avail.multi), match:Math.min(6,avail.match)};
+
+  // Redistribute any shortfall to types that have capacity
+  let used = counts.single+counts.multi+counts.match;
+  const types = ['single','multi','match'];
+  if(used < TOTAL){
+    let remaining = TOTAL - used;
+    types.forEach(t=>{
+      if(remaining <= 0) return;
+      const extra = Math.min(remaining, avail[t] - counts[t]);
+      if(extra > 0){ counts[t] += extra; remaining -= extra; }
+    });
+  }
+  // Trim to TOTAL if somehow over
+  let total = counts.single+counts.multi+counts.match;
+  if(total > TOTAL){
+    const over = total - TOTAL;
+    counts.single = Math.max(0, counts.single - over);
+  }
+
+  const singles = pickByType(labelled,'single',counts.single);
+  const multis  = pickByType(labelled,'multi', counts.multi);
+  const matches = pickByType(labelled,'match', counts.match);
+
+  // Interleave types: S M X S M X ... so same type never clusters
+  const pool = [];
+  const buckets = [[...singles],[...multis],[...matches]];
+  let bi = 0;
+  while(buckets.some(b=>b.length)){
+    const b = buckets[bi%3];
+    if(b.length) pool.push(b.shift());
+    bi++;
+    if(bi > 200) break;
   }
 
   if(!pool.length){
-    pool = TOPICS.flatMap(t => (BANK[t] || []).filter(isValidQuestion).map(q=>({...q,t}))).slice(0,20);
+    const fb = labelled.slice(0,TOTAL);
+    testQ = fb.map(prepareQuestion);
+  } else {
+    testQ = pool.map(prepareQuestion);
   }
 
-  testQ = pool.map(prepareQuestion);
   answers = testQ.map(emptyAnswer);
   submitted = new Array(testQ.length).fill(false);
   current = 0; started = true; finished = false; resultRecorded=false; startTime = Date.now();
 }
+
+// ═══════════════════════════════════════════════════════
+// EXPLAIN (AI)
+// ═══════════════════════════════════════════════════════
+const explainCache = {};
+
+window.explainQuestion = function(idx) {
+  const btn = document.getElementById('explain-btn-'+idx);
+  const box = document.getElementById('explain-box-'+idx);
+  if(!btn || !box) return;
+
+  if(explainCache[idx]){ box.style.display='block'; return; }
+
+  const q = testQ[idx];
+  const userAns = answers[idx];
+  const type = q.type || 'single';
+  const score = getQuestionScore(q, userAns);
+  const fully = score === 1;
+  const partial = score > 0 && score < 1;
+
+  // ── Helyes válasz(ok) szövege ──
+  let correctText = '';
+  let wrongItems = [];
+  let userItems = [];
+
+  if(type === 'single'){
+    correctText = q.opts[q.ans];
+    wrongItems = q.opts.filter((_,i) => i !== q.ans);
+    userItems = (userAns !== null && userAns !== undefined) ? [q.opts[userAns]] : [];
+  } else if(type === 'multi'){
+    correctText = q.ans.map(i => q.opts[i]).join(', ');
+    wrongItems = q.opts.filter((_,i) => !q.ans.includes(i));
+    userItems = Array.isArray(userAns) ? userAns.map(i => q.opts[i]) : [];
+  } else if(type === 'match'){
+    correctText = q.matchPairs.map(p => p.left + ' → ' + q.rightOptions[p.ans]).join('; ');
+    wrongItems = [];
+    userItems = Array.isArray(userAns)
+      ? q.matchPairs.map((p,i) => p.left + ' → ' + (q.rightOptions[userAns[i]] || '?'))
+      : [];
+  }
+
+  // ── Helytelen opciók magyarázata ──
+  const wrongExplains = {
+    single: wrongItems.map(w => `<li><strong>${esc(w)}</strong> – ez helytelen, mert nem felel meg a kérdés feltételének.</li>`).join(''),
+    multi: wrongItems.map(w => `<li><strong>${esc(w)}</strong> – ez nem szerepel a helyes válaszok között.</li>`).join(''),
+    match: ''
+  };
+
+  // ── Felhasználó válaszának értékelése ──
+  let userSection = '';
+  if(!fully && userItems.length){
+    if(type === 'match'){
+      const rows = q.matchPairs.map((p,i) => {
+        const uv = Array.isArray(userAns) ? userAns[i] : -1;
+        const ok = uv === p.ans;
+        const uLabel = q.rightOptions[uv] || '–';
+        const cLabel = q.rightOptions[p.ans];
+        return `<li>${ok ? '✓' : '✗'} <strong>${esc(p.left)}</strong>: te → <em>${esc(uLabel)}</em>${ok ? '' : ', helyes → <em>'+esc(cLabel)+'</em>'}</li>`;
+      }).join('');
+      userSection = `<div class="ex-section"><div class="ex-label">A te párosításaid:</div><ul class="ex-list">${rows}</ul></div>`;
+    } else {
+      const userLabel = fully ? '' : (partial ? '⚠️ Részben helyes válaszod:' : '✗ A te válaszod:');
+      userSection = `<div class="ex-section"><div class="ex-label">${userLabel}</div><div class="ex-value wrong-val">${esc(userItems.join(', '))}</div></div>`;
+    }
+  }
+
+  // ── Memotipp generálás ──
+  const memoTips = [
+    'Ismételd el hangosan: mi a helyes válasz és miért.',
+    'Képzelj el egy valós munkahelyi szituációt, ahol ezt alkalmaznád.',
+    'Írd le a helyes választ egy cédulára – az írás segíti a memorizálást.',
+    'Kapcsold össze egy már ismert fogalommal: mi a hasonlóság?',
+    'Ha újra találkozol ezzel a témával, gondolj vissza erre a kérdésre.'
+  ];
+  const memo = memoTips[idx % memoTips.length];
+
+  // ── Teljes magyarázat HTML összerakása ──
+  const statusBadge = fully
+    ? '<span class="ex-badge ok">✓ Helyes válasz</span>'
+    : partial
+      ? '<span class="ex-badge partial">⚠ Részben helyes</span>'
+      : '<span class="ex-badge bad">✗ Helytelen válasz</span>';
+
+  const html = `
+    <div class="ex-header">${statusBadge}</div>
+
+    <div class="ex-section">
+      <div class="ex-label">✦ Helyes válasz:</div>
+      <div class="ex-value correct-val">${esc(correctText)}</div>
+    </div>
+
+    <div class="ex-section">
+      <div class="ex-label">📖 Magyarázat:</div>
+      <div class="ex-body">${esc(q.exp || 'Lásd a tananyagban.')}</div>
+    </div>
+
+    ${userSection}
+
+    ${type !== 'match' && wrongItems.length ? `<div class="ex-section">
+      <div class="ex-label">✗ Miért helytelenek a többiek:</div>
+      <ul class="ex-list">${wrongExplains[type]}</ul>
+    </div>` : ''}
+
+    <div class="ex-section ex-memo">
+      <div class="ex-label">💡 Memotipp:</div>
+      <div class="ex-body">${memo}</div>
+    </div>
+  `;
+
+  box.innerHTML = html;
+  box.style.display = 'block';
+  explainCache[idx] = true;
+
+  btn.innerHTML = '<span class="explain-icon">✦</span> Magyarázat betöltve';
+  btn.style.opacity = '0.5';
+  btn.style.cursor = 'default';
+};
 
 // ═══════════════════════════════════════════════════════
 // NAV
@@ -6004,16 +6266,17 @@ function renderQuiz(){
       let c='opt-btn';
       if(done){ if(i===q.ans) c+=' correct'; else if(i===ans) c+=' wrong'; }
       return `<button class="${c}"${done?' disabled':''} onclick="choose(${i})">
-        <span class="opt-letter">${'ABCD'[i]}</span><span>${esc(o)}</span>
+        <span class="opt-letter">${'ABCDEF'[i]}</span><span>${esc(o)}</span>
       </button>`;
     }).join('')}</div>`;
   } else if(q.type==='multi'){
-    answerHtml = `<div class="opts">${q.opts.map((o,i)=>{
+    const multiHint = !done ? `<div class="multi-hint">Jelölj ki ${q.ans.length} helyes választ a ${q.opts.length}-ből!</div>` : '';
+    answerHtml = multiHint + `<div class="opts">${q.opts.map((o,i)=>{
       const selected=Array.isArray(ans)&&ans.includes(i);
       let c='opt-btn multi-opt'+(selected?' selected':'');
       if(done){ if(q.ans.includes(i)) c+=' correct'; else if(selected) c+=' wrong'; }
       return `<button class="${c}"${done?' disabled':''} onclick="toggleMulti(${i})">
-        <span class="opt-letter">${selected?'✓':'ABCD'[i]}</span><span>${esc(o)}</span>
+        <span class="opt-letter">${selected?'✓':'ABCDEF'[i]}</span><span>${esc(o)}</span>
       </button>`;
     }).join('')}</div>`;
   } else if(q.type==='match'){
@@ -6031,8 +6294,11 @@ function renderQuiz(){
     }).join('')}</div>`;
   }
 
-  const fb = done ? `<div class="feedback ${isCorrectAnswer(q,ans)?'fb-ok':'fb-bad'}">
-    <span>${isCorrectAnswer(q,ans) ? 'Helyes! ' : 'Helytelen. '}${esc(q.exp||'')}</span>
+  const score_q = done ? getQuestionScore(q, ans) : 0;
+  const partial_q = done && score_q>0 && score_q<1;
+  const partialPts = partial_q ? Math.round(score_q*2*10)/10 : 0;
+  const fb = done ? `<div class="feedback ${isCorrectAnswer(q,ans)?'fb-ok':partial_q?'fb-partial':'fb-bad'}">
+    <span>${isCorrectAnswer(q,ans) ? 'Helyes! ' : partial_q ? `Részben helyes (${partialPts}/2 pt) – ` : 'Helytelen. '}${esc(q.exp||'')}</span>
   </div>` : '';
 
   const ac = submitted.filter(Boolean).length;
@@ -6059,6 +6325,12 @@ function renderQuiz(){
     </div>
     ${answerHtml}
     ${fb}
+    ${done ? `<div class="explain-wrap" id="explain-wrap-${current}">
+      <button class="btn-explain" onclick="explainQuestion(${current})" id="explain-btn-${current}">
+        <span class="explain-icon">✦</span> Magyarázd el részletesen
+      </button>
+      <div class="explain-box" id="explain-box-${current}" style="display:none"></div>
+    </div>` : ''}
     <div class="qnav">
       <button class="btn btn-ghost btn-md" onclick="prev()"${current===0?' disabled':''}>Előző</button>
       <span class="nav-mid">${ac}/${testQ.length}</span>
@@ -6074,8 +6346,10 @@ function renderResults(){
   clearInterval(timerIv);
   const ok = testQ.filter((q,i)=>isCorrectAnswer(q, answers[i])).length;
   const total = testQ.length;
-  const pts = ok*2;
-  const pct = Math.round(ok/total*100);
+  // Partial scoring: each question worth 2 pts, score = sum of partial scores * 2
+  const rawScore = testQ.reduce((sum,q,i)=>sum+getQuestionScore(q,answers[i]),0);
+  const pts = Math.round(rawScore*2*10)/10; // round to 1 decimal
+  const pct = Math.round(rawScore/total*100);
   const pass = pct>=40;
   const grade = getGrade(pct);
   const el = Math.floor((Date.now()-startTime)/1000);
@@ -6086,31 +6360,46 @@ function renderResults(){
 
   const topicRes = {};
   testQ.forEach((q,i)=>{
-    if(!topicRes[q.t]) topicRes[q.t]={ok:0,total:0};
+    if(!topicRes[q.t]) topicRes[q.t]={score:0,total:0};
     topicRes[q.t].total++;
-    if(isCorrectAnswer(q, answers[i])) topicRes[q.t].ok++;
+    topicRes[q.t].score+=getQuestionScore(q, answers[i]);
   });
 
-  const topicBarsHtml = Object.entries(topicRes).map(([t,{ok:o,total:tot}])=>{
-    const p=Math.round(o/tot*100); const c=topicColor(p);
+  const topicBarsHtml = Object.entries(topicRes).map(([t,{score:s,total:tot}])=>{
+    const p=Math.round(s/tot*100); const c=topicColor(p);
     const short=t.length>34?t.slice(0,32)+'…':t;
     return `<div class="tbar">
       <div class="tbar-name">${esc(short)}</div>
       <div class="tbar-track"><div class="tbar-fill" style="width:0%;background:${c}" data-pct="${p}"></div></div>
-      <div class="tbar-pct" style="color:${c}">${o}/${tot}</div>
+      <div class="tbar-pct" style="color:${c}">${Math.round(s*10)/10}/${tot}</div>
     </div>`;
   }).join('');
 
   const rev = testQ.map((q,i)=>{
-    const o = isCorrectAnswer(q, answers[i]);
-    const a = o
-      ? `<span class="ra-ok">Helyes: ${esc(correctText(q))}</span>`
-      : `<span class="ra-bad">Te: ${esc(answerText(q,answers[i]))}</span><span class="ra-sep">·</span><span class="ra-ok">Helyes: ${esc(correctText(q))}</span>`;
-    return `<div class="rev-item ${o?'rok':'rbad'}">
-      <div class="rev-icon ${o?'ok':'bad'}">${o?'✓':'✗'}</div>
+    const score = getQuestionScore(q, answers[i]);
+    const o = score===1;
+    const partial = !o && score>0;
+    const partial_info = partial ? getPartialInfo(q, answers[i]) : null;
+    const pts_q = Math.round(score*2*10)/10;
+    let statusIcon, statusClass;
+    if(o){ statusIcon='✓'; statusClass='ok'; }
+    else if(partial){ statusIcon='½'; statusClass='partial'; }
+    else { statusIcon='✗'; statusClass='bad'; }
+
+    let ansDisplay;
+    if(o){
+      ansDisplay=`<span class="ra-ok">Helyes: ${esc(correctText(q))}</span>`;
+    } else if(partial && partial_info){
+      const typeStr=(q.type==='match')?'párosítás':'válasz';
+      ansDisplay=`<span class="ra-partial">${partial_info.correct}/${partial_info.total} helyes ${typeStr} · ${pts_q} pt</span><span class="ra-sep">·</span><span class="ra-ok">Helyes: ${esc(correctText(q))}</span>`;
+    } else {
+      ansDisplay=`<span class="ra-bad">Te: ${esc(answerText(q,answers[i]))}</span><span class="ra-sep">·</span><span class="ra-ok">Helyes: ${esc(correctText(q))}</span>`;
+    }
+    return `<div class="rev-item ${o?'rok':partial?'rpart':'rbad'}">
+      <div class="rev-icon ${statusClass}">${statusIcon}</div>
       <div class="rev-body">
         <div class="rev-q">${i+1}. ${esc(q.q)} <span class="rev-type">${questionTypeLabel(q)}</span></div>
-        <div class="rev-ans">${a}</div>
+        <div class="rev-ans">${ansDisplay}</div>
       </div>
     </div>`;
   }).join('');
@@ -6133,8 +6422,8 @@ function renderResults(){
       <span class="grade-badge" style="border-color:${grade.c}30;color:${grade.c}">${grade.l}</span>
     </div>
     <div class="sgrid">
-      <div class="scell"><div class="sval sg">${ok}</div><div class="slbl">Helyes</div></div>
-      <div class="scell"><div class="sval sr">${total-ok}</div><div class="slbl">Helytelen</div></div>
+      <div class="scell"><div class="sval sg">${ok}</div><div class="slbl">Teljesen helyes</div></div>
+      <div class="scell"><div class="sval sr">${total-ok}</div><div class="slbl">Nem teljesen helyes</div></div>
       <div class="scell"><div class="sval">${pts} pt</div><div class="slbl">Összpontszám</div></div>
     </div>
     <div class="res-actions">
@@ -6166,8 +6455,8 @@ function animateRing(){
     const el=document.getElementById('rfg');
     if(el){
       const C=2*Math.PI*44;
-      const ok=testQ.filter((q,i)=>isCorrectAnswer(q, answers[i])).length;
-      el.style.strokeDashoffset=C-ok/testQ.length*C;
+      const rawScore=testQ.reduce((sum,q,i)=>sum+getQuestionScore(q,answers[i]),0);
+      el.style.strokeDashoffset=C-rawScore/testQ.length*C;
     }
   },120);
 }
@@ -6218,22 +6507,34 @@ window.startTopicTest = (topic) => {
 window.startWeakTest = () => {
   const d=DB.load(); const ts=d.topicStats||{};
   const weak=TOPICS.filter(t=>{const s=ts[t];return!s||s.total===0||(s.correct/s.total)<0.6;});
-  let pool=[];
-  const seen=new Set();
-  const src=shuffle(weak.length ? weak : TOPICS);
-  while(pool.length<20){
-    let added=false;
-    src.forEach(t=>{
-      if(pool.length>=20) return;
-      const qs=shuffle((BANK[t]||[]).filter(isValidQuestion));
-      const q=qs.find(x=>!seen.has(t+'::'+x.q));
-      if(q){ seen.add(t+'::'+q.q); pool.push({...q,t}); added=true; }
-    });
-    if(!added) break;
+  const srcTopics=weak.length ? weak : TOPICS;
+  // Build labelled pool from weak topics
+  const labelled=srcTopics.flatMap(t=>(BANK[t]||[]).filter(isValidQuestion).map(q=>({...q,t})));
+  // Apply same balanced type distribution as pickTest
+  const TOTAL=20;
+  const avail={
+    single:labelled.filter(q=>(q.type||'single')==='single').length,
+    multi: labelled.filter(q=>q.type==='multi').length,
+    match: labelled.filter(q=>q.type==='match').length,
+  };
+  const counts={single:Math.min(7,avail.single),multi:Math.min(7,avail.multi),match:Math.min(6,avail.match)};
+  let remaining=TOTAL-(counts.single+counts.multi+counts.match);
+  ['single','multi','match'].forEach(t=>{
+    if(remaining<=0) return;
+    const extra=Math.min(remaining,avail[t]-counts[t]);
+    if(extra>0){counts[t]+=extra;remaining-=extra;}
+  });
+  const singles=shuffle(labelled.filter(q=>(q.type||'single')==='single')).slice(0,counts.single);
+  const multis =shuffle(labelled.filter(q=>q.type==='multi')).slice(0,counts.multi);
+  const matches=shuffle(labelled.filter(q=>q.type==='match')).slice(0,counts.match);
+  const pool=[];
+  const buckets=[[...singles],[...multis],[...matches]];
+  let bi=0;
+  while(buckets.some(b=>b.length)){
+    const b=buckets[bi%3]; if(b.length) pool.push(b.shift()); bi++; if(bi>200) break;
   }
-  pool=pool.slice(0,20);
   quizMode='weak'; quizTopic=null;
-  testQ=pool.map(prepareQuestion);
+  testQ=(pool.length?pool:labelled.slice(0,TOTAL)).map(prepareQuestion);
   answers=testQ.map(emptyAnswer);
   submitted=new Array(testQ.length).fill(false);
   current=0;started=true;finished=false;resultRecorded=false;startTime=Date.now();
